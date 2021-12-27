@@ -34,10 +34,10 @@ C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_We
 C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.pdb
 C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.genruntimeconfig.cache
 C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.csproj.CopyComplete
-C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.csprojAssemblyReference.cache
 C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\LineUp\Index.cshtml.g.cs
 C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Profiel\Index.cshtml.g.cs
 C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Registratie\Index.cshtml.g.cs
 C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Ticket\Index.cshtml.g.cs
 C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\TimeTable\Index.cshtml.g.cs
+C:\Users\Lander\Desktop\Project webapplicaties\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.csprojAssemblyReference.cache
