@@ -16,6 +16,6 @@ namespace Project_Webapplicaties.Models
 
         public int? LineUpID { get; set; }
 
-        public LineUp? LineUp { get; set; }
+        public LineUp LineUp { get; set; }
     }
 }

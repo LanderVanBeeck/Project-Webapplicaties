@@ -1,0 +1,33 @@
+﻿@model Project_Webapplicaties.ViewModels.DeleteLineUpViewModel
+@{ 
+    ViewData["Title"] = "Delete LineUp";
+}
+<div class="title-box">
+    <h1 class="title">Delete</h1>
+    <h2>Waarschuwing! Het verwijderen van dit item kan niet ongedaan gemaakt worden!</h2>
+    <h4>Line-up</h4>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Datum" class="control-label"></label>
+                : @Model.Datum
+                <span asp-validation-for="Datum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tijd" class="control-label"></label>
+                : @Model.Tijd
+                <span asp-validation-for="Tijd" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Terug naar vorige pagina</a>
+</div>
+@section Scripts {
+@{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

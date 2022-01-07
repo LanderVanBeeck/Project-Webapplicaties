@@ -1,40 +1,40 @@
 ﻿@model Project_Webapplicaties.ViewModels.TicketListViewModel
-    <div class="title-box">
-        <h2 class="title">Ticket</h2>
-    </div>
-     <br />
-    <div class="info-box">
-        <div class="ticket-table">
-            <table>
-                <thead>
+<div class="title-box">
+    <h2 class="title">Ticket</h2>
+</div>
+<br />
+<div class="info-box">
+    <div class="ticket-table">
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-md-4">
+                        @Html.DisplayNameFor(model => model.Tickets[0].TicketID)
+                    </th>
+                    <th class="col-md-4">
+                        @Html.DisplayNameFor(model => model.Tickets[0].Type)
+                    </th>
+                    <th class="col-md-4">
+                        @Html.DisplayNameFor(model => model.Tickets[0].Prijs)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Tickets)
+                {
                     <tr>
-                        <th class="col-md-4">
-                            @Html.DisplayNameFor(model => model.Tickets[0].TicketID)
-                        </th>
-                        <th class="col-md-4">
-                            @Html.DisplayNameFor(model => model.Tickets[0].Type)
-                        </th>
-                        <th class="col-md-4">
-                            @Html.DisplayNameFor(model => model.Tickets[0].Prijs)
-                        </th>
+                        <td class="col-md-4">
+                            @item.TicketID
+                        </td>
+                        <td class="col-md-4">
+                            @item.Type
+                        </td>
+                        <td class="col-md-4">
+                            @item.Prijs
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.Tickets)
-                    {
-                        <tr>
-                            <td class="col-md-4">
-                                @item.TicketID
-                            </td>
-                            <td class="col-md-4">
-                                @item.Type
-                            </td>
-                            <td class="col-md-4">
-                                @item.Prijs
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
+                }
+            </tbody>
+        </table>
     </div>
+</div>

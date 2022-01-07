@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Project_Webapplicaties.Areas.Identity.Data;
 using Project_Webapplicaties.Models;
 using System;
 using System.Collections.Generic;
@@ -7,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Project_Webapplicaties.Data
 {
-    public class ProjectContext : DbContext
+    public class ProjectContext : IdentityDbContext<CustomUser>
     {
         public ProjectContext(DbContextOptions<ProjectContext> options)
             : base(options)
@@ -21,6 +24,7 @@ namespace Project_Webapplicaties.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Gebruiker>().ToTable("Gebruiker");
             modelBuilder.Entity<Ticket>().ToTable("Ticket").Property(p => p.Prijs).HasColumnType("decimal(18,2)");
             modelBuilder.Entity<LineUp>().ToTable("LineUp");

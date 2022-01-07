@@ -19,6 +19,6 @@ namespace Project_Webapplicaties.Models
 
         public int? BestellingID { get; set; }
 
-        public Bestelling? Bestelling { get; set; }
+        public Bestelling Bestelling { get; set; }
     }
 }

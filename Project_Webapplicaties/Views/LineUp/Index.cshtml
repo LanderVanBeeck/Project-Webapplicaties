@@ -1,8 +1,14 @@
 ﻿@model Project_Webapplicaties.ViewModels.LineUpListViewModel
-    <div class="title-box">
-        <h2 class="title">Line-up</h2>
-    </div>
+<div class="title-box">
+    <h2 class="title">Line-up</h2>
+</div>
 <br />
+@if (this.User.Identity.IsAuthenticated)
+{
+    <p>
+        <a asp-action="Create">Create new</a>
+    </p>
+}
 <div class="info-box">
     <div class="ticket-table">
         <table>
@@ -18,16 +24,23 @@
             </thead>
             <tbody>
                 @foreach (var item in Model.artiesten)
-            {
-                <tr>
-                    <td class="col-md-4">
-                        @item.Naam
-                    </td>
-                    <td class="col-md-4">
-                        @item.Genre
-                    </td>
-                </tr>
-            }
+                {
+                    <tr>
+                        <td class="col-md-4">
+                            @item.Naam
+                        </td>
+                        <td class="col-md-4">
+                            @item.Genre
+                        </td>
+                        <td>
+                            @if (this.User.Identity.IsAuthenticated)
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.LineUpID">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@item.LineUpID">Delete</a>
+                            }
+                        </td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>
