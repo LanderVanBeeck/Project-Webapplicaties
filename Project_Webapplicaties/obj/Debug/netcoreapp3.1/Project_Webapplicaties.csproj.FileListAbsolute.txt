@@ -245,7 +245,12 @@ C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Deb
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
-C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.csproj.AssemblyReference.cache
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\LineUp\Create.cshtml.g.cs
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\LineUp\Delete.cshtml.g.cs
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\LineUp\Edit.cshtml.g.cs
+C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Ticket\Create.cshtml.g.cs
+C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Ticket\Delete.cshtml.g.cs
+C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Ticket\Edit.cshtml.g.cs
+C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Gebruiker\Index.cshtml.g.cs
+C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Gebruiker\Details.cshtml.g.cs
+C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Gebruiker\Create.cshtml.g.cs

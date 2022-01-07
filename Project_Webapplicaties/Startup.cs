@@ -6,7 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Project_Webapplicaties.Areas.Identity.Data;
 using Project_Webapplicaties.Data;
+using Project_Webapplicaties.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +30,9 @@ namespace Project_Webapplicaties
         {
             services.AddControllersWithViews();
             services.AddDbContext<ProjectContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LocalDBConnection")));
-
+            services.AddDefaultIdentity<CustomUser>()
+                    .AddRoles<IdentityRole>()
+                    .AddEntityFrameworkStores<ProjectContext>();
             services.Configure<IdentityOptions>(options =>
             {
                 //password settings
@@ -52,7 +56,7 @@ namespace Project_Webapplicaties
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -79,16 +83,7 @@ namespace Project_Webapplicaties
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Registratie}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Login}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "default",
                     pattern: "{controller=LineUp}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Profiel}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Ticket}/{action=Index}/{id?}");
@@ -97,6 +92,39 @@ namespace Project_Webapplicaties
                     pattern: "{controller=TimeTable}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            //CreateRoles(serviceProvider).Wait();
+        }
+
+        private async Task CreateRoles(IServiceProvider serviceProvider)
+        {
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<CustomUser>>();
+            ProjectContext context = serviceProvider.GetRequiredService<ProjectContext>();
+
+            string[] roleNames = { "Admin", "Manager", "Member" };
+            IdentityResult roleResult;
+
+            foreach (var roleName in roleNames)
+            {
+                var roleExists = await roleManager.RoleExistsAsync(roleName);
+                if (!roleExists)
+                {
+                    roleResult = await roleManager.CreateAsync(new IdentityRole(roleName));
+                }
+            }
+
+            CustomUser user = context.Users.FirstOrDefault(u => u.Email == "r0843288@student.thomasmore.be");
+            if (user != null)
+            {
+                DbSet<IdentityUserRole<string>> roles = context.UserRoles;
+                IdentityRole adminRole = context.Roles.FirstOrDefault(r => r.Name == "Admin");
+                if (adminRole != null)
+                {
+                    roles.Add(new IdentityUserRole<string>() { UserId = user.Id, RoleId = adminRole.Id });
+                    context.SaveChanges();
+                }
+            }
         }
     }
 }

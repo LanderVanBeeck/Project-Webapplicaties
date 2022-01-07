@@ -1,0 +1,20 @@
+﻿@model Project_Webapplicaties.ViewModels.GebruikerDetailsViewModel
+@{ 
+    ViewData["Title"] = "Details gebruiker";
+}
+
+<div class="title-box">
+    <h1 class="title">@Model.Naam</h1>
+</div>
+
+<p>
+    Id: @Model.Id
+</p>
+<p>
+    Username: @Model.UserName
+</p>
+<p>
+    Geboortedatum: @Model.GeboorteDatum
+</p>
+
+@Html.ActionLink("Terug","Index","Gebruiker")

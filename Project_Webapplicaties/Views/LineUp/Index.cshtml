@@ -35,6 +35,7 @@
                         <td>
                             @if (this.User.Identity.IsAuthenticated)
                             {
+                                <a asp-action="Create" asp-route-id="@item.LineUpID">Create</a>
                                 <a asp-action="Edit" asp-route-id="@item.LineUpID">Edit</a>
                                 <a asp-action="Delete" asp-route-id="@item.LineUpID">Delete</a>
                             }

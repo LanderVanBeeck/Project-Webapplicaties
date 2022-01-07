@@ -17,12 +17,6 @@ namespace Project_Webapplicaties.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<ProjectContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("ProjectContextConnection")));
-
-                services.AddDefaultIdentity<CustomUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<ProjectContext>();
             });
         }
     }

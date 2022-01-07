@@ -1,0 +1,49 @@
+﻿@model Project_Webapplicaties.ViewModels.CreateTicketVIewModel
+@{
+    ViewData["title"] = "Create ticket";
+}
+
+<div class="title-box">
+    <h1 class="title">Create</h1>
+    <h4>Ticket</h4>
+</div>
+<br />
+<div class="info-box">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Type" class="control-label"></label>
+                    <input asp-for="Type" class="form-control" />
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Beschrijving" class="control-label"></label>
+                    <input asp-for="Beschrijving" class="form-control" />
+                    <span asp-validation-for="Beschrijving" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vip" class="control-label"></label>
+                    <input asp-for="Vip" class="form-control" />
+                    <span asp-validation-for="Vip" class="form-control"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Prijs" class="control-label"></label>
+                    <input asp-for="Prijs" class="form-control" />
+                    <span asp-validation-for="Prijs" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Terug naar vorige pagina</a>
+</div>
+
+@section Scripts {
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

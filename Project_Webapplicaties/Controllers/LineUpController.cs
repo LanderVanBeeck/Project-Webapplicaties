@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Project_Webapplicaties.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     public class LineUpController : Controller
     {
         public List<Artiest> artiesten { get; set; }
