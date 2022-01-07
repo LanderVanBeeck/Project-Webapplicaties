@@ -254,3 +254,4 @@ C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Deb
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Gebruiker\Index.cshtml.g.cs
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Gebruiker\Details.cshtml.g.cs
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Razor\Views\Gebruiker\Create.cshtml.g.cs
+C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.csproj.AssemblyReference.cache

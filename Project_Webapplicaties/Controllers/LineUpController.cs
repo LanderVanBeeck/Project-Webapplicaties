@@ -55,25 +55,7 @@ namespace Project_Webapplicaties.Controllers
             
         }
 
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            LineUp lineUp = await _context.LineUp.FindAsync(id);
-
-            if (lineUp == null)
-            {
-                return NotFound();
-            }
-            EditLineUpViewModel vm = new EditLineUpViewModel()
-            {
-                Datum = lineUp.Datum,
-                Tijd = lineUp.Tijd
-            };
-            return View(vm);
-        }
+        
 
         [HttpPost]
         [ValidateAntiForgeryToken]
