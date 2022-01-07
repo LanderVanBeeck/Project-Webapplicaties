@@ -8,23 +8,26 @@
 </div>
 <hr/>
 <div class="info-box">
-                    <form asp-action="Login">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-group">
-                            <label asp-for="Mail" class="control-label"></label>
-                            <input asp-for="Mail" class="form-control" />
-                            <span asp-validation-for="Mail" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Wachtwoord" class="control-label"></label>
-                            <input asp-for="Wachtwoord" class="form-control" />
-                            <span asp-validation-for="Wachtwoord" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Login" class="btn btn-primary" />
-                        </div>
-                    </form>
+    <div class="form-box">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Mail" class="control-label"></label>
+                <input asp-for="Mail" class="form-control" />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wachtwoord" class="control-label"></label>
+                <input asp-for="Wachtwoord" class="form-control" />
+                <span asp-validation-for="Wachtwoord" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
 </div>
-
-<h3 class="Register-title">Nog geen account? Registreer hier</h3>
-<button onclick="window.location = 'https://localhost:44359/Registratie'" class="card-button">Registreer</button>
+<br />
+<div class="register-container">
+    <button onclick="window.location = 'https://localhost:44359/Registratie'" class="register-button">Registreer</button>
+</div>

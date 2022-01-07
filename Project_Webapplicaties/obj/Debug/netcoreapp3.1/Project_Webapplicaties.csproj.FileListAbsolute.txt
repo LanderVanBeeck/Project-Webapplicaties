@@ -51,7 +51,6 @@ C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\bin\Deb
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\bin\Debug\netcoreapp3.1\Project_Webapplicaties.pdb
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\bin\Debug\netcoreapp3.1\Project_Webapplicaties.Views.dll
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\bin\Debug\netcoreapp3.1\Project_Webapplicaties.Views.pdb
-C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.csprojAssemblyReference.cache
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.AssemblyInfoInputs.cache
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.AssemblyInfo.cs
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.csproj.CoreCompileInputs.cache
@@ -124,3 +123,4 @@ C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\bin\Deb
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lander\Desktop\p2\Project-Webapplicaties\Project_Webapplicaties\obj\Debug\netcoreapp3.1\Project_Webapplicaties.csprojAssemblyReference.cache

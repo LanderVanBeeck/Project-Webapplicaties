@@ -25,6 +25,7 @@ namespace Project_Webapplicaties.Data
             modelBuilder.Entity<Ticket>().ToTable("Ticket").Property(p => p.Prijs).HasColumnType("decimal(18,2)");
             modelBuilder.Entity<LineUp>().ToTable("LineUp");
             modelBuilder.Entity<Artiest>().ToTable("Artiest");
+            modelBuilder.Entity<Bestelling>().ToTable("Bestelling").Property(p => p.TotaalBedrag).HasColumnType("decimal(18,2)");
         }
     }
 }

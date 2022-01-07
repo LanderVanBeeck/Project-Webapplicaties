@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project_Webapplicaties.Data;
 
 namespace Project_Webapplicaties.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    partial class ProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20220107081327_migration2")]
+    partial class migration2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +32,7 @@ namespace Project_Webapplicaties.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("LineUpID")
+                    b.Property<int>("LineUpID")
                         .HasColumnType("int");
 
                     b.Property<string>("Naam")
@@ -42,29 +44,6 @@ namespace Project_Webapplicaties.Migrations
                     b.HasIndex("LineUpID");
 
                     b.ToTable("Artiest");
-                });
-
-            modelBuilder.Entity("Project_Webapplicaties.Models.Bestelling", b =>
-                {
-                    b.Property<int>("BestellingID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("GebruikerID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TicketID")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("TotaalBedrag")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("BestellingID");
-
-                    b.HasIndex("GebruikerID");
-
-                    b.ToTable("Bestelling");
                 });
 
             modelBuilder.Entity("Project_Webapplicaties.Models.Gebruiker", b =>
@@ -130,25 +109,18 @@ namespace Project_Webapplicaties.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Beschrijving")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("BestellingID")
+                    b.Property<int>("GebruikerID")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Prijs")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Vip")
                         .HasColumnType("bit");
 
                     b.HasKey("TicketID");
 
-                    b.HasIndex("BestellingID");
+                    b.HasIndex("GebruikerID");
 
                     b.ToTable("Ticket");
                 });
@@ -157,23 +129,18 @@ namespace Project_Webapplicaties.Migrations
                 {
                     b.HasOne("Project_Webapplicaties.Models.LineUp", "LineUp")
                         .WithMany("Artiesten")
-                        .HasForeignKey("LineUpID");
-                });
-
-            modelBuilder.Entity("Project_Webapplicaties.Models.Bestelling", b =>
-                {
-                    b.HasOne("Project_Webapplicaties.Models.Gebruiker", "Gebruiker")
-                        .WithMany("Bestellingen")
-                        .HasForeignKey("GebruikerID")
+                        .HasForeignKey("LineUpID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
             modelBuilder.Entity("Project_Webapplicaties.Models.Ticket", b =>
                 {
-                    b.HasOne("Project_Webapplicaties.Models.Bestelling", "Bestelling")
+                    b.HasOne("Project_Webapplicaties.Models.Gebruiker", "Gebruiker")
                         .WithMany("Tickets")
-                        .HasForeignKey("BestellingID");
+                        .HasForeignKey("GebruikerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -85,10 +85,30 @@ body {
     color:white;
 }
 
-.Register-title {
+.register-title {
     text-align:center;
     font-size:25px;
     color:white;
+}
+
+.register-container {
+    height: auto;
+    width: 150px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+.register-button {
+    vertical-align: central;
+    background-color: indianred;
+    color: white;
+    font-size: 25px;
+    height: 40px;
+    width: 150px;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-container {
@@ -155,6 +175,18 @@ body {
 }
 
 .form-group {
-    margin: 10px;
-    width:50px;
+    margin: 5px;
+    width: 500px;
+}
+
+.form-box {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.ticket-table {
+    align-self: center;
+    margin-left: 300px;
 }

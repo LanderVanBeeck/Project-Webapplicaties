@@ -13,13 +13,14 @@ namespace Project_Webapplicaties.Models
         public int ArtiestID { get; }
 
         [DataType(DataType.Date)]
-
+        [Required]
         public DateTime Datum { get; set; }
 
         [DataType(DataType.Time)]
-
+        [Required]
         public DateTime Tijd { get; set; }
 
-        public ICollection<Artiest> Artiesten { get; set; }
+        public Artiest Artiest { get; set; }
+
     }
 }

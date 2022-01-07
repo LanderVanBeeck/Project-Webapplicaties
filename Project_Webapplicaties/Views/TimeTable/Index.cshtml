@@ -1,3 +1,45 @@
-﻿<h2>Timetable</h2>
+﻿@model Project_Webapplicaties.ViewModels.TimeTableListViewModel
+<div class="title-box">
+    <h2 class="title">Timetable</h2>
+</div>
 
-<p>Dit is de index view van de TimeTableController</p>
+<div class="info-box">
+    <table class="Ticket-Table">
+        <thead>
+            <tr>
+                <th class="col-md-4">
+                    @Html.DisplayNameFor(model => model.LineUp[0].Datum)
+                </th>
+                <th class="col-md-4">
+                    @Html.DisplayNameFor(model => model.LineUp[0].Tijd)
+                </th>
+                <th class="col-md-4">
+                    @Html.DisplayNameFor(model => model.Artiest[1].Naam)
+                </th>
+                <th class="col-md-4">
+                    @Html.DisplayNameFor(model => model.Artiest[1].Genre)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.LineUp)
+            {
+                <tr>
+                    <td class="col-md-4">
+                        @item.Datum.ToString("d")
+                    </td>
+                    <td class="col-md-4">
+                        @item.Tijd.ToString("t")
+                    </td>
+                    <td class="col-md-4">
+                        @item.Artiest.Naam
+                    </td>
+                    <td class="col-md-4">
+                        @item.Artiest.Genre
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

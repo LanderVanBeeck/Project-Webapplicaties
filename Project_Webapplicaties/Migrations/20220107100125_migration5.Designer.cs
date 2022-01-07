@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project_Webapplicaties.Data;
 
 namespace Project_Webapplicaties.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    partial class ProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20220107100125_migration5")]
+    partial class migration5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +32,7 @@ namespace Project_Webapplicaties.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("LineUpID")
+                    b.Property<int>("LineUpID")
                         .HasColumnType("int");
 
                     b.Property<string>("Naam")
@@ -157,7 +159,9 @@ namespace Project_Webapplicaties.Migrations
                 {
                     b.HasOne("Project_Webapplicaties.Models.LineUp", "LineUp")
                         .WithMany("Artiesten")
-                        .HasForeignKey("LineUpID");
+                        .HasForeignKey("LineUpID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Project_Webapplicaties.Models.Bestelling", b =>
