@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lander\\Desktop\\Project webapplicaties\\Project-Webapplicaties\\Project_Webapplicaties\\Project_Webapplicaties.csproj": {}
+    "C:\\Users\\Lander\\Desktop\\p2\\Project-Webapplicaties\\Project_Webapplicaties\\Project_Webapplicaties.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lander\\Desktop\\Project webapplicaties\\Project-Webapplicaties\\Project_Webapplicaties\\Project_Webapplicaties.csproj": {
+    "C:\\Users\\Lander\\Desktop\\p2\\Project-Webapplicaties\\Project_Webapplicaties\\Project_Webapplicaties.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lander\\Desktop\\Project webapplicaties\\Project-Webapplicaties\\Project_Webapplicaties\\Project_Webapplicaties.csproj",
+        "projectUniqueName": "C:\\Users\\Lander\\Desktop\\p2\\Project-Webapplicaties\\Project_Webapplicaties\\Project_Webapplicaties.csproj",
         "projectName": "Project_Webapplicaties",
-        "projectPath": "C:\\Users\\Lander\\Desktop\\Project webapplicaties\\Project-Webapplicaties\\Project_Webapplicaties\\Project_Webapplicaties.csproj",
+        "projectPath": "C:\\Users\\Lander\\Desktop\\p2\\Project-Webapplicaties\\Project_Webapplicaties\\Project_Webapplicaties.csproj",
         "packagesPath": "C:\\Users\\Lander\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lander\\Desktop\\Project webapplicaties\\Project-Webapplicaties\\Project_Webapplicaties\\obj\\",
+        "outputPath": "C:\\Users\\Lander\\Desktop\\p2\\Project-Webapplicaties\\Project_Webapplicaties\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lander\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,26 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

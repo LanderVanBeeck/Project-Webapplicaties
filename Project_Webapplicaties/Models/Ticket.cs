@@ -12,5 +12,9 @@ namespace Project_Webapplicaties.Models
         public int Prijs { get; set; }
 
         public bool Vip { get; set; }
+
+        public int GebruikerID { get; set; }
+
+        public Gebruiker Gebruiker { get; set; }
     }
 }

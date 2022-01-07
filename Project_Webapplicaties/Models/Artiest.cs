@@ -12,5 +12,9 @@ namespace Project_Webapplicaties.Models
         public string Naam { get; set; }
 
         public string Genre { get; set; }
+
+        public int LineUpID { get; set; }
+
+        public LineUp LineUp { get; set; }
     }
 }

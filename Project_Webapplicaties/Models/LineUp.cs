@@ -19,5 +19,7 @@ namespace Project_Webapplicaties.Models
         [DataType(DataType.Time)]
 
         public DateTime Tijd { get; set; }
+
+        public ICollection<Artiest> Artiesten { get; set; }
     }
 }

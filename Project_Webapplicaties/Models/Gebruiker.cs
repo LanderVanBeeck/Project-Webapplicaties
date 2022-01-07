@@ -8,7 +8,7 @@ namespace Project_Webapplicaties.Models
 {
     public class Gebruiker
     {
-        public int UserID { get; set; }
+        public int GebruikerID { get; set; }
 
         public string Naam { get; set; }
 
@@ -27,5 +27,7 @@ namespace Project_Webapplicaties.Models
         [DataType(DataType.Date)]
 
         public DateTime GeboorteDatum { get; set; }
+
+        public ICollection<Ticket> Tickets { get; set; }
     }
 }
